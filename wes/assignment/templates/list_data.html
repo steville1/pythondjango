@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+{% if all_assignment %}
+<h3>All Personal Details</h3>
+<table>
+	{% for assign in all_assignment %}
+<tr>
+	<td>{{assign.names}}</td>
+	<td>{{assign.email}}</td>
+	{% endfor %}
+</tr>
+</table>
+{% else %}
+
+<h3> You don't have any Personal Details in the database</h3>
+{% endif %}
+
+
+
+{% endblock %}
